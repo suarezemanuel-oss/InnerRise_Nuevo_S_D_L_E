@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Inner-Rise</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<script src="estilo.js"></script>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="top-header">
+        <img src="logo.jpg" class="logo-img" alt="Logo de Inner-Rise">
+        <div class="brand-text">
+            <h1>Inner-Rise</h1>
+            <p class="slogan">¡Confía, brilla y sé tú mismo!</p>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cuidado-personal.html">Cuidado Personal</a></li>
+            <li><a href="redes-sociales.html">Redes Sociales</a></li>
+            <li><a href="proyecto.html">Proyecto</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="recurso.html">Recursos</a></li>
+            <li><a href="contacto.html" class="active">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="principal">
+
+        <!-- EQUIPO DESARROLLADOR -->
+        <section class="hero">
+            <h2>Equipo Desarrollador</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="Dylan.jpg" alt="Dylan Echavarría Arango" class="member-photo">
+                    <h3>Dylan Echavarría Arango</h3>
+                    <p>Administrador</p>
+                </div>
+                <div class="team-card">
+                    <img src="IMG-20260819-WA0007.jpg" alt="Luis Angel Martínez Borja" class="member-photo">
+                    <h3>Luis Angel Martínez Borja</h3>
+                    <p>Documentador</p>
+                </div>
+                <div class="team-card">
+                    <img src="yo.jpeg" alt="Samuel Mora Rivera" class="member-photo">
+                    <h3>Samuel Mora Rivera</h3>
+                    <p>Desarrollador</p>
+                </div>
+                <div class="team-card">
+                    <img src="suarez.jpeg" alt="Emanuel Suarez Echavarria" class="member-photo">
+                    <h3>Emanuel Suarez Echavarria</h3>
+                    <p>Analista</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE MAPA Y FORMULARIO (INFORMACIÓN COMBINADA) -->
+        <div class="contacto-flex-container">
+
+            <!-- UBICACIÓN DEL COLEGIO -->
+            <div class="mapa-card">
+                <h2>Ubicación del Colegio</h2>
+                <p><strong>Dirección:</strong> Calle 91 #65-119, Francisco Zea, Castilla, Medellín</p>
+                
+                <div class="mapa-responsive">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Calle%2091%20%2365-119%2C%20Francisco%20Zea%2C%20Medellin&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- TARJETA COMBINADA: INFORMACIÓN DEL PROYECTO + FORMULARIO -->
+            <form action="guardar.php" method="POST">
+                
+                <!-- BLOQUE DE INFORMACIÓN DEL PROYECTO -->
+                <div class="info-proyecto-unificada">
+                    <h2>Información del Proyecto</h2>
+                    <p><strong>Institución Educativa:</strong> Dinamarca</p>
+                    <p><strong>Programa:</strong> Desarrollo de Software - Grado 11°</p>
+
+                </div>
+
+                <hr class="separador-formulario">
+
+                <!-- FORMULARIO DE OPINIÓN -->
+                <h2>Formulario de Opinión</h2>
+                <table>
+                    <tr>
+                        <td><label for="name">Nombre:</label></td>
+                        <td><input type="text" placeholder="Coloque su nombre" maxlength="10" required name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastname">Apellido:</label></td>
+                        <td><input type="text" placeholder="Coloque su apellido" maxlength="10" required name="lastname" id="lastname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="age">Edad:</label></td>
+                        <td><input type="number" placeholder="Coloque su edad" required name="age" id="age"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="description">Su opinión del proyecto:</label></td>
+                        <td><textarea name="description" placeholder="Escriba su opinión" id="description" rows="3"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="study">Grados:</label></td>
+                        <td>
+                            <select name="study" id="study">
+                                <option value="">Seleccione una opción</option>
+                                <option value="11">11°</option>
+                                <option value="10">10°</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label>Género:</label></td>
+                        <td>
+                            <input type="radio" name="gender" value="man" id="man">
+                            <label for="man">Hombre</label>
+                            <input type="radio" name="gender" value="woman" id="woman">
+                            <label for="woman">Mujer</label>
+                            <input type="radio" name="gender" value="heli" id="heli">
+                            <label for="heli">Otro</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="number">Calificación (1 a 10):</label></td>
+                        <td><input type="number" name="number" id="number" min="1" max="10"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="form-buttons">
+                            <input type="submit" value="Enviar">
+                            <input type="reset" value="Limpiar">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 Inner-Rise - Institución Educativa Dinamarca | Desarrollo de Software</p>
+    </footer>
+
+</body>
+</html>
